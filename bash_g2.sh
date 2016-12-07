@@ -1,15 +1,15 @@
 
 #!/bin/bash
 
-Nome : Autor Vinicius Dreyer De Araujo
+Nome : Vinicius Dreyer De Araujo
 # Script para efetuar o backup de arquivos usando os comandos Rsync ou Scp.
 
 principal() {           
- # FunÁ„o principal do programa
+ # Fun√ß√£o principal do programa
     clear                       
 
-    echo [1] Definir arquivo    - imprime na tela as opÁıes que ser„o abordadas no comando case.
-    echo [2] Definir diretÛrio" 
+    echo [1] Definir arquivo    - imprime na tela as op√ß√µes que ser√£o abordadas no comando case.
+    echo [2] Definir diret√≥rio" 
     echo [3] Definir caminho
     echo [4] Definir socket
     echo [5] Definir software de backup
@@ -18,121 +18,121 @@ principal() {
     echo ""
     echo -n - Qual a opcao desejada ? 
     read opcao          
-  faz a leitura da vari·vel "opcao', 
-                                  # que ser· utilizada no comando case
-                                  # para indicar qual a opÁ„o a ser utilizada
+  faz a leitura da vari√°vel "opcao', 
+                                  # que ser√° utilizada no comando case
+                                  # para indicar qual a op√ß√£o a ser utilizada
 
-                                  # caso o valor da vari·vel "opcao"...
+                                  # caso o valor da vari√°vel "opcao"...
     case $opcao in
-        1)                        # seja igual a "1", ent„o faÁa as instruÁıes abaixo
+        1)                        # seja igual a "1", ent√£o fa√ßa as instru√ß√µes abaixo
             clear
-            define_arquivo        # executa os comandos da funÁ„o "define_arquivo"
+            define_arquivo        # executa os comandos da fun√ß√£o "define_arquivo"
             ;;          
      # os 2 ";;" (ponto e virgula)
  # significam que chegou ao final
- # esta opÁ„o do comando case
+ # esta op√ß√£o do comando case
         2)              
- # seja igual a "2", ent„o faÁa as instruÁıes abaixo
+ # seja igual a "2", ent√£o fa√ßa as instru√ß√µes abaixo
             clear
             define_diretorio      
             ;;          
  # os 2 ";;" (ponto e virgula)
  # significam que chegou ao final
- # esta opÁ„o do comando case
+ # esta op√ß√£o do comando case
         3)              
- # seja igual a "3", ent„o faÁa as instruÁıes abaixo
+ # seja igual a "3", ent√£o fa√ßa as instru√ß√µes abaixo
             clear
             define_caminho        
             ;;          
  # os 2 ";;" (ponto e virgula)
  # significam que chegou ao final
- # esta opÁ„o do comando case
+ # esta op√ß√£o do comando case
         4)              
- # seja igual a "4", ent„o faÁa as instruÁıes abaixo
+ # seja igual a "4", ent√£o fa√ßa as instru√ß√µes abaixo
             clear
             define_socket     
             ;;          
  # os 2 ";;" (ponto e virgula)
  # significam que chegou ao final
- # esta opÁ„o do comando case
+ # esta op√ß√£o do comando case
         5)              
- # seja igual a "5", ent„o faÁa as instruÁıes abaixo
+ # seja igual a "5", ent√£o fa√ßa as instru√ß√µes abaixo
             clear
             define_software       
             ;;             
  # os 2 ";;" (ponto e virgula)
  # significam que chegou ao final
- # esta opÁ„o do comando case
+ # esta op√ß√£o do comando case
         6)              
- # seja igual a "6", ent„o faÁa as instruÁıes abaixo
+ # seja igual a "6", ent√£o fa√ßa as instru√ß√µes abaixo
             clear
             efetua_backup     
             ;;          
  # os 2 ";;" (ponto e virgula)
  # significam que chegou ao final
- # esta opÁ„o do comando case
+ # esta op√ß√£o do comando case
         7)
             clear
             exit ;;
         *)              
- # esta opÁao existe para caso o usu·rio digite um 
+ # esta op√ßao existe para caso o usu√°rio digite um 
  # valor diferente de 1, 2 ou 3
             opcao_invalida ;;
- # opcao inv·lida.
+ # opcao inv√°lida.
     esac
 }
 
-define_arquivo() {      # funÁ„o da opÁ„o define_arquivo
+define_arquivo() {      # fun√ß√£o da op√ß√£o define_arquivo
     clear # limpa tela
-    echo "Qual o nome completo e extens„o do arquivo que deseja copiar? [Use *,para todos os arquivos de um diretÛrio]" # interaÁ„o com usu·rio
-    read nomeArquivo  # efetua a leitura de entradas para · vari·vel
-    read pause # usado para pausar a execuÁ„o do script
-    principal # volta para a funÁ„o principal
+    echo "Qual o nome completo e extens√£o do arquivo que deseja copiar? [Use *,para todos os arquivos de um diret√≥rio]" # intera√ß√£o com usu√°rio
+    read nomeArquivo  # efetua a leitura de entradas para √° vari√°vel
+    read pause # usado para pausar a execu√ß√£o do script
+    principal # volta para a fun√ß√£o principal
 }
 
-define_diretorio() {    # funÁ„o da opÁ„o define_diretorio
+define_diretorio() {    # fun√ß√£o da op√ß√£o define_diretorio
     clear # limpa tela
-    echo "Qual o nome do diretÛrio que deseja copiar? [Especifique corretamente letras mauÌsculas e minusculas Exemplo: Documents]"
-# interaÁ„o com usu·rio
-    echo "VocÍ tambem pode colocar a referÍncia absoluta: [Exemplo: /home/user/Downloads/]"
-# interaÁ„o com usu·rio
-    read nomeDiretorio  # efetua a leitura de entradas para · vari·vel
-    read pause # usado para pausar a execuÁ„o do script
-    principal # volta para a funÁ„o principal
+    echo "Qual o nome do diret√≥rio que deseja copiar? [Especifique corretamente letras mau√≠sculas e minusculas Exemplo: Documents]"
+# intera√ß√£o com usu√°rio
+    echo "Voc√™ tambem pode colocar a refer√™ncia absoluta: [Exemplo: /home/user/Downloads/]"
+# intera√ß√£o com usu√°rio
+    read nomeDiretorio  # efetua a leitura de entradas para √° vari√°vel
+    read pause # usado para pausar a execu√ß√£o do script
+    principal # volta para a fun√ß√£o principal
 }
 
-define_caminho() {  # funÁ„o da opÁ„o define_caminho
+define_caminho() {  # fun√ß√£o da op√ß√£o define_caminho
     clear # limpa tela
-    echo "Qual a referÍncia completa do caminho de destino para onde deseja copiar [Exemplo: ~/Documents]"
-# interaÁ„o com usu·rio
-    read nomeCaminho   # efetua a leitura de entradas para · vari·vel
+    echo "Qual a refer√™ncia completa do caminho de destino para onde deseja copiar [Exemplo: ~/Documents]"
+# intera√ß√£o com usu√°rio
+    read nomeCaminho   # efetua a leitura de entradas para √° vari√°vel
     read pause          
- # usado para pausar a execuÁ„o do script
+ # usado para pausar a execu√ß√£o do script
     principal           
- # volta para a funÁ„o principal
+ # volta para a fun√ß√£o principal
 }
 
-define_socket() {  # funÁ„o da opÁ„o define_socket
+define_socket() {  # fun√ß√£o da op√ß√£o define_socket
     clear # limpa tela
-    echo "Qual o IP de conex„o remota para backup?"
-# interaÁ„o com usu·rio
-    read enderecoIp  # efetua a leitura de entradas para · vari·vel
-    echo "Qual a porta SSH padr„o do host remoto?"
-# interaÁ„o com usu·rio
-    read portaSsh  # efetua a leitura de entradas para · vari·vel
-    echo "Qual o usu·rio remoto para efetuar o backup?"
-# interaÁ„o com usu·rio
-    read usuarioBackup  # efetua a leitura de entradas para · vari·vel
-    read pause          # usado para pausar a execuÁ„o do script
-    principal      # volta para a funÁ„o principal
+    echo "Qual o IP de conex√£o remota para backup?"
+# intera√ß√£o com usu√°rio
+    read enderecoIp  # efetua a leitura de entradas para √° vari√°vel
+    echo "Qual a porta SSH padr√£o do host remoto?"
+# intera√ß√£o com usu√°rio
+    read portaSsh  # efetua a leitura de entradas para √° vari√°vel
+    echo "Qual o usu√°rio remoto para efetuar o backup?"
+# intera√ß√£o com usu√°rio
+    read usuarioBackup  # efetua a leitura de entradas para √° vari√°vel
+    read pause          # usado para pausar a execu√ß√£o do script
+    principal      # volta para a fun√ß√£o principal
 }
 
-define_software() {  # funÁ„o da opÁ„o define_software
+define_software() {  # fun√ß√£o da op√ß√£o define_software
     clear # limpa tela
     echo "Qual o software que deseja usar para o backup? - [1] RSYNC | [2] SCP]"
-# interaÁ„o com usu·rio
+# intera√ß√£o com usu√°rio
     read sBackupLuis
-# efetua a leitura de entradas para · vari·vel
+# efetua a leitura de entradas para √° vari√°vel
 echo "teste"
     clear # limpa tela
     if test $sBackupLuis -eq 1
@@ -140,77 +140,77 @@ echo "teste"
 then
 clear
 # limpa tela
-echo "FunÁ„o RSYNC escolhida."
-# interaÁ„o com usu·rio
+echo "Fun√ß√£o RSYNC escolhida."
+# intera√ß√£o com usu√°rio
 principal
 
     elif test $sBackupLuis -eq 2
 then
 clear
 # limpa tela
-echo "FunÁ„o SCP escolhida."
-# interaÁ„o com usu·rio
+echo "Fun√ß√£o SCP escolhida."
+# intera√ß√£o com usu√°rio
 principal
-# volta para a funÁ„o principal
+# volta para a fun√ß√£o principal
 
     else
 clear
 # limpa tela
-echo "OpÁ„o inv·lida."
-# interaÁ„o com usu·rio
+echo "Op√ß√£o inv√°lida."
+# intera√ß√£o com usu√°rio
 define_software
     fi
-    read pause # usado para pausar a execuÁ„o do script
-    principal # volta para a funÁ„o principal
+    read pause # usado para pausar a execu√ß√£o do script
+    principal # volta para a fun√ß√£o principal
 }
-efetua_backup(){  # funÁ„o da opÁ„o efetua_backup
+efetua_backup(){  # fun√ß√£o da op√ß√£o efetua_backup
     clear
     echo "EFETUADO BACKUP CONFORME DADOS PASSADOS...]"
-# interaÁ„o com usu·rio
+# intera√ß√£o com usu√°rio
      if test $sBackupLuis -eq 1
 # inicio if
 then
 clear
 # limpa tela
 echo "Utilizando RSYNC..."
-# interaÁ„o com usu·rio
-rsync -vzha -e 'ssh -p $portaSsh' --progress $nomeDiretorio/$nomeArquivo $usuarioBackup@$enderecoIp:$nomeCaminho # funÁ„o rsync
+# intera√ß√£o com usu√°rio
+rsync -vzha -e 'ssh -p $portaSsh' --progress $nomeDiretorio/$nomeArquivo $usuarioBackup@$enderecoIp:$nomeCaminho # fun√ß√£o rsync
     elif test $sBackupLuis -eq 2
 then
 clear
 # limpa tela
 echo "Utilizando SCP..."
-# interaÁ„o com usu·rio
+# intera√ß√£o com usu√°rio
 scp -vP $portaSsh $nomeDiretorio/$nomeArquivo $usuarioBackup@$enderecoIp:$nomeCaminho
-# funÁao scp
+# fun√ßao scp
     else
 clear
 # limpa tela
-echo "OpÁ„o inv·lida."
-# interaÁ„o com usu·rio
-echo "N„o foi possivel fazer o backup, cancele a execuÁ„o do script e repita o processo."
-# interaÁ„o com usu·rio
+echo "Op√ß√£o inv√°lida."
+# intera√ß√£o com usu√°rio
+echo "N√£o foi possivel fazer o backup, cancele a execu√ß√£o do script e repita o processo."
+# intera√ß√£o com usu√°rio
     fi
     echo "Script finalizado, verifique o backup!"
-# interaÁ„o com usu·rio
-    read pause # usado para pausar a execuÁ„o do script
+# intera√ß√£o com usu√°rio
+    read pause # usado para pausar a execu√ß√£o do script
     clear # limpa tela
-    exit 0 # sai da aplicaÁ„o
+    exit 0 # sai da aplica√ß√£o
 }
 
 
-opcao_invalida() {  # funÁ„o da opÁ„o inv·lida
+opcao_invalida() {  # fun√ß√£o da op√ß√£o inv√°lida
     clear # limpa tela
     echo "Opcao desconhecida."
-# interaÁ„o com usu·rio
-    read pause # usado para pausar a execuÁ„o do script
-    principal # volta para a funÁ„o principal
+# intera√ß√£o com usu√°rio
+    read pause # usado para pausar a execu√ß√£o do script
+    principal # volta para a fun√ß√£o principal
 }
 
 principal               
-# o script comeÁa aqui, as funÁıes das linhas anteriores
-# s„o lidas pelo interpretador bash e armazenadas na memÛria.
+# o script come√ßa aqui, as fun√ß√µes das linhas anteriores
+# s√£o lidas pelo interpretador bash e armazenadas na mem√≥ria.
 
-# o bash n„o tem como adivinhar qual das funÁıes ele deve executar, por isto o a execuÁ„o do script realmente comeÁa
-# quando aparece uma instruÁ„o fora de uma funÁ„o, neste caso, chamando a funÁ„o principal
+# o bash n√£o tem como adivinhar qual das fun√ß√µes ele deve executar, por isto o a execu√ß√£o do script realmente come√ßa
+# quando aparece uma instru√ß√£o fora de uma fun√ß√£o, neste caso, chamando a fun√ß√£o principal
 
